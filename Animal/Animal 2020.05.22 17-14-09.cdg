@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Animal">
+  <ClassDiagramComponents>
+    <Class name="Animal" package="Animal" visibility="publıc" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="age" type="int" visibility="publıc"/>
+        <Field name="gender" type="String" visibility="publıc"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+        <Constructor visibility="publıc">
+          <Argument type="int" name="age"/>
+          <Argument type="String" name="gender"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isMammal" returnType="void" visibility="publıc">
+          <Argument type="boolean" name="bool"/>
+        </Method>
+        <Method name="mate" returnType="void" visibility="publıc">
+          <Argument type="boolean" name="bool"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Duck" package="Animal" visibility="publıc" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="beakColor" type="String" visibility="publıc"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+        <Constructor visibility="publıc">
+          <Argument type="int" name="age"/>
+          <Argument type="String" name="gender"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="swim" returnType="void" visibility="publıc">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="quack" returnType="void" visibility="publıc"/>
+      </Methods>
+    </Class>
+    <Class name="Fish" package="Animal" visibility="publıc" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="sizeInFt" type="int" visibility="prıvate"/>
+        <Field name="canEat" type="boolean" visibility="prıvate"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+        <Constructor visibility="publıc">
+          <Argument type="int" name="age"/>
+          <Argument type="String" name="gender"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="swim" returnType="void" visibility="prıvate">
+          <Argument type="int" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Zebra" package="Animal" visibility="publıc" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="is_wild" type="boolean" visibility="publıc"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc">
+          <Argument type="int" name="age"/>
+          <Argument type="String" name="gender"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="run" returnType="void" visibility="publıc">
+          <Argument type="int" name="x"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Animal.Fish" target="Animal.Animal"/>
+    <IsRelation name="is" source="Animal.Duck" target="Animal.Animal"/>
+    <IsRelation name="is" source="Animal.Zebra" target="Animal.Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

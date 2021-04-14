@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="homework4q3">
+  <ClassDiagramComponents>
+    <Class name="Adres" package="homework4q3" visibility="publıc" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="cadde" type="String" visibility="prıvate"/>
+        <Field name="sehir" type="String" visibility="prıvate"/>
+        <Field name="postaKodu" type="String" visibility="prıvate"/>
+        <Field name="kisi" type="ArrayList&lt;Kisi&gt;" visibility="prıvate"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+        <Constructor visibility="publıc">
+          <Argument type="String" name="cadde"/>
+          <Argument type="String" name="sehir"/>
+          <Argument type="String" name="postaKodu"/>
+          <Argument type="ArrayList&lt;Kisi&gt;" name="kisi"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCadde" returnType="String" visibility="publıc"/>
+        <Method name="setCadde" returnType="void" visibility="publıc">
+          <Argument type="String" name="cadde"/>
+        </Method>
+        <Method name="getSehir" returnType="String" visibility="publıc"/>
+        <Method name="setSehir" returnType="void" visibility="publıc">
+          <Argument type="String" name="sehir"/>
+        </Method>
+        <Method name="getPostaKodu" returnType="String" visibility="publıc"/>
+        <Method name="setPostaKodu" returnType="void" visibility="publıc">
+          <Argument type="String" name="postaKodu"/>
+        </Method>
+        <Method name="getKisi" returnType="ArrayList&lt;Kisi&gt;" visibility="publıc"/>
+        <Method name="setKisi" returnType="void" visibility="publıc">
+          <Argument type="ArrayList&lt;Kisi&gt;" name="kisi"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="publıc"/>
+        <Method name="ekranaYaz" returnType="void" visibility="publıc"/>
+      </Methods>
+    </Class>
+    <Class name="Kisi" package="homework4q3" visibility="publıc" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="adi" type="String" visibility="prıvate"/>
+        <Field name="telefonu" type="String" visibility="prıvate"/>
+        <Field name="email" type="String" visibility="prıvate"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+        <Constructor visibility="publıc">
+          <Argument type="String" name="adi"/>
+          <Argument type="String" name="telefonu"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAdi" returnType="String" visibility="publıc"/>
+        <Method name="setAdi" returnType="void" visibility="publıc">
+          <Argument type="String" name="adi"/>
+        </Method>
+        <Method name="getTelefonu" returnType="String" visibility="publıc"/>
+        <Method name="setTelefonu" returnType="void" visibility="publıc">
+          <Argument type="String" name="telefonu"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="publıc"/>
+        <Method name="setEmail" returnType="void" visibility="publıc">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="publıc"/>
+        <Method name="yemekAl" returnType="boolean" visibility="publıc"/>
+      </Methods>
+    </Class>
+    <Class name="Ogrenci" package="homework4q3" visibility="publıc" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="ogrenciNo" type="String" visibility="prıvate"/>
+        <Field name="not" type="String" visibility="prıvate"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+        <Constructor visibility="publıc">
+          <Argument type="String" name="ogrenciNo"/>
+          <Argument type="String" name="not"/>
+        </Constructor>
+        <Constructor visibility="publıc">
+          <Argument type="String" name="adi"/>
+          <Argument type="String" name="telefonu"/>
+          <Argument type="String" name="email"/>
+          <Argument type="String" name="ogrenciNo"/>
+          <Argument type="String" name="not"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getOgrenciNo" returnType="String" visibility="publıc"/>
+        <Method name="setOgrenciNo" returnType="void" visibility="publıc">
+          <Argument type="String" name="ogrenciNo"/>
+        </Method>
+        <Method name="getNot" returnType="String" visibility="publıc"/>
+        <Method name="setNot" returnType="void" visibility="publıc">
+          <Argument type="String" name="not"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="publıc"/>
+        <Method name="kayitliMi" returnType="boolean" visibility="publıc"/>
+      </Methods>
+    </Class>
+    <Class name="Profesor" package="homework4q3" visibility="publıc" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="maas" type="int" visibility="prıvate"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="publıc"/>
+        <Constructor visibility="publıc">
+          <Argument type="int" name="maas"/>
+        </Constructor>
+        <Constructor visibility="publıc">
+          <Argument type="String" name="adi"/>
+          <Argument type="String" name="telefonu"/>
+          <Argument type="String" name="email"/>
+          <Argument type="int" name="maas"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMaas" returnType="int" visibility="publıc"/>
+        <Method name="setMaas" returnType="void" visibility="publıc">
+          <Argument type="int" name="maas"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="publıc"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="kisi" source="homework4q3.Adres" target="homework4q3.Kisi" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Kisi&gt;"/>
+    <IsRelation name="is" source="homework4q3.Profesor" target="homework4q3.Kisi"/>
+    <IsRelation name="is" source="homework4q3.Ogrenci" target="homework4q3.Kisi"/>
+    <UseRelation source="homework4q3.Adres" target="homework4q3.Kisi" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
